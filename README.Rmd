@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# mutagen
+# mutagen <img src='man/figures/logo.jpeg' align="right" height="136.5" />
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)

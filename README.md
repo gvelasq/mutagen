@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mutagen
+# mutagen <img src='man/figures/logo.jpeg' align="right" height="136.5" />
 
 <!-- badges: start -->
 
