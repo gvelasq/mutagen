@@ -4,3 +4,6 @@
 ^README\.Rmd$
 ^cran-comments\.md$
 ^\.github$
+^\.travis\.yml$
+^codecov\.yml$
+^\.covrignore$
