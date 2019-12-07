@@ -1,0 +1,16 @@
+Package: mutagen
+Title: Extensions to dplyr's mutate
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Gustavo",
+           family = "Velásquez",
+           role = c("aut", "cre"),
+           email = "gvelasq2github@gmail.com")
+Description: Extensions to dplyr's mutate.
+License: MIT + file LICENSE
+Suggests: 
+    testthat
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
