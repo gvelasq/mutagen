@@ -5,12 +5,13 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R-CMD-check](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/gvelasq/mutagen/graph/badge.svg)](https://app.codecov.io/gh/gvelasq/mutagen)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/mutagen)](https://CRAN.R-project.org/package=mutagen)
-[![Codecov test
-coverage](https://codecov.io/gh/gvelasq/mutagen/branch/master/graph/badge.svg)](https://codecov.io/gh/gvelasq/mutagen?branch=master)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 The goal of mutagen is to provide extensions to dplyr’s `mutate()`.

@@ -1,2 +1,3 @@
-destination: docs
 url: https://gvelasq.github.io/mutagen/
+template:
+  bootstrap: 5
