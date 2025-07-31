@@ -8,7 +8,7 @@ Authors@R:
            email = "gvelasq2github@gmail.com")
 Description: Extensions to dplyr's mutate.
 License: MIT + file LICENSE
-URL: https://github.com/gvelasq/mutagen
+URL: https://github.com/gvelasq/mutagen, https://gvelasq.github.io/mutagen/
 BugReports: https://github.com/gvelasq/mutagen/issues
 Depends: 
     R (>= 3.2)
