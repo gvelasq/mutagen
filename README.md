@@ -7,7 +7,7 @@
 
 [![R-CMD-check](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/gvelasq/mutagen/branch/master/graph/badge.svg)](https://codecov.io/gh/gvelasq/mutagen?branch=master)
+coverage](https://codecov.io/gh/gvelasq/mutagen/graph/badge.svg)](https://app.codecov.io/gh/gvelasq/mutagen)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/mutagen)](https://CRAN.R-project.org/package=mutagen)
 [![Lifecycle:
