@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/gvelasq/mutagen/graph/badge.svg)](https://app.codecov.io/gh/gvelasq/mutagen)
 [![CRAN
