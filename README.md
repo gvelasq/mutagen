@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mutagen <img src='man/figures/logo.png' align="right" height="200" />
+# mutagen <img src="man/figures/logo.png" align="right" height="200"/>
 
 <!-- badges: start -->
 
@@ -12,9 +12,17 @@ coverage](https://codecov.io/gh/gvelasq/mutagen/graph/badge.svg)](https://app.co
 status](https://www.r-pkg.org/badges/version/mutagen)](https://CRAN.R-project.org/package=mutagen)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
 <!-- badges: end -->
 
 The goal of mutagen is to provide extensions to dplyr’s `mutate()`.
+
+mutagen provides simple-to-use functions as alternatives to complex R
+idioms for variable generation. Some mutagen functions are specific to
+problems encountered in R (e.g., working with list-columns in a data
+frame), while others solve more generic data science operations that are
+inspired by the excellent set of
+[`egen`](https://www.stata.com/manuals/degen.pdf) functions in Stata.
 
 ## Installation
 
@@ -25,6 +33,18 @@ You can install the development version of mutagen from
 # install.packages("devtools")
 devtools::install_github("gvelasq/mutagen")
 ```
+
+## Usage
+
+mutagen functions begin with the prefix `gen_*` and are designed to be
+used inside dplyr’s `mutate()`. A mnemonic for this is that to use
+mutagen, first **muta**te then **gen**erate.
+
+| mutagen function | R idiom | Stata idiom |
+|----|----|----|
+| `gen_na_listcol()` | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
+
+## Contributing
 
 Please note that the mutagen project is released with a [Contributor
 Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing to this
