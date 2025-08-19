@@ -54,7 +54,9 @@
 </div>
 <!-- badges: start -->
 
+<!-- badges: end -->
 <p>The goal of mutagen is to provide extensions to dplyr’s <code>mutate()</code>.</p>
+<p>mutagen provides simple-to-use functions as alternatives to complex R idioms for variable generation. Some mutagen functions are specific to problems encountered in R (e.g., working with list-columns in a data frame), while others solve more generic data science operations that are inspired by the excellent set of <a href="https://www.stata.com/manuals/degen.pdf" class="external-link"><code>egen</code></a> functions in Stata.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -62,6 +64,32 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gvelasq/mutagen"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
+<p>mutagen functions begin with the prefix <code>gen_*</code> and are designed to be used inside dplyr’s <code>mutate()</code>. A mnemonic for this is that to use mutagen, first <strong>muta</strong>te then <strong>gen</strong>erate.</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th>mutagen function</th>
+<th>R idiom</th>
+<th>Stata idiom</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><code><a href="reference/gen_na_listcol.html">gen_na_listcol()</a></code></td>
+<td><code>modify_tree(leaf = \(x) replace(x, is.null(x), NA))</code></td>
+<td><code>N/A</code></td>
+</tr></tbody>
+</table>
+</div>
+<div class="section level2">
+<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+</h2>
 <p>Please note that the mutagen project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
