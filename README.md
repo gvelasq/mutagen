@@ -10,6 +10,8 @@
 coverage](https://codecov.io/gh/gvelasq/mutagen/graph/badge.svg)](https://app.codecov.io/gh/gvelasq/mutagen)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/mutagen)](https://CRAN.R-project.org/package=mutagen)
+[![mutagen status
+badge](https://gvelasq.r-universe.dev/mutagen/badges/version)](https://gvelasq.r-universe.dev/mutagen)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
