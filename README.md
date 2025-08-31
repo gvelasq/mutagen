@@ -3,6 +3,17 @@
 
 # mutagen <img src="man/figures/logo.png" align="right" height="200"/>
 
+> The issue is of human time rather than silicon chip time. Human time
+> can be wasted by taking longer to write the code, and (often much more
+> importantly) by taking more time to understand subsequently what it
+> does.
+>
+> – [*The R
+> Inferno*](https://www.burns-stat.com/documents/books/the-r-inferno)
+> *(Patrick Burns, 2011)*
+
+------------------------------------------------------------------------
+
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/gvelasq/mutagen/actions/workflows/R-CMD-check.yaml)
