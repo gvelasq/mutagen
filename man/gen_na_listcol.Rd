@@ -13,11 +13,13 @@ gen_na_listcol(.x)
 A list with all \code{NULL} values replaced with \code{NA}.
 }
 \description{
-This function takes a list and replaces all \code{NULL} values with \code{NA}. It is useful for working with list-columns in a data frame. Parallelization is supported via \href{https://purrr.tidyverse.org/reference/in_parallel.html}{\code{purrr::in_parallel()}}.
+This function takes a list and replaces all \code{NULL} values with \code{NA}. It is useful for working with list-columns in a data frame.
+}
+\details{
+Parallelization is supported via \href{https://purrr.tidyverse.org/reference/in_parallel.html}{\code{purrr::in_parallel()}}.
 }
 \examples{
-library(dplyr)
-
+library(dplyr, warn.conflicts = FALSE)
 a <-
   mtcars \%>\%
   select(cyl, vs, am) \%>\%
@@ -25,7 +27,6 @@ a <-
   as_tibble() \%>\%
   mutate(listcol = list(NULL, "b", "c", "d", "e", "f"))
 glimpse(a)
-
 b <-
   a \%>\%
   mutate(across(starts_with("listcol"), gen_na_listcol))
