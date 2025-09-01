@@ -53,9 +53,10 @@ mutagen functions begin with the prefix `gen_*` and are designed to be
 used inside dplyr’s `mutate()`. A mnemonic for this is that to use
 mutagen, first **muta**te then **gen**erate.
 
-| mutagen function | R idiom | Stata idiom |
+| mutagen function | R idiom | Stata function |
 |----|----|----|
 | `gen_na_listcol()`[^1] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
+| `gen_rowcount()`[^2] | `unlist(pmap(data, \(x) sum(list(x) %in% values)` | `egen anycount` |
 
 ## Contributing
 
@@ -64,4 +65,7 @@ Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing to this
 project, you agree to abide by its terms.
 
 [^1]: Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+[^2]: Parallelization is supported via
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
