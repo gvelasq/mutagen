@@ -4,10 +4,10 @@
 \alias{gen_na_listcol}
 \title{Replace NULLs in a list-column with NAs}
 \usage{
-gen_na_listcol(.x)
+gen_na_listcol(x)
 }
 \arguments{
-\item{.x}{A list or list-column to modify.}
+\item{x}{A list or list-column to modify.}
 }
 \value{
 A list with all \code{NULL} values replaced with \code{NA}.

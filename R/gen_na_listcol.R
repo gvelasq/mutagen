@@ -4,7 +4,7 @@
 #'
 #' Parallelization is supported via [`purrr::in_parallel()`](https://purrr.tidyverse.org/reference/in_parallel.html).
 #'
-#' @param .x A list or list-column to modify.
+#' @param x A list or list-column to modify.
 #'
 #' @returns A list with all `NULL` values replaced with `NA`.
 #'
@@ -22,11 +22,11 @@
 #'   mutate(across(starts_with("listcol"), gen_na_listcol))
 #' glimpse(b)
 #' @export
-gen_na_listcol <- function(.x) {
-  stopifnot(".x must be a list" = is.list(.x))
-  .x <- purrr::modify_tree(
-    .x,
-    leaf = purrr::in_parallel(\(.x) replace(.x, is.null(.x), NA))
+gen_na_listcol <- function(x) {
+  stopifnot("x must be a list" = is.list(x))
+  x <- purrr::modify_tree(
+    x,
+    leaf = purrr::in_parallel(\(x) replace(x, is.null(x), NA))
   )
-  .x
+  x
 }
