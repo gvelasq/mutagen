@@ -31,6 +31,6 @@ gen_rowcount <- function(data, cols, values) {
   if (!missing(cols)) {
     data <- dplyr::select(data, {{ cols }})
   }
-  x <- unlist(purrr::pmap(data, purrr::in_parallel(\(...) sum(list(...) %in% values), values = values)))
+  x <- purrr::pmap_int(data, purrr::in_parallel(\(...) sum(list(...) %in% values), values = values))
   x
 }
