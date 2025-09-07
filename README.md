@@ -28,14 +28,16 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 <!-- badges: end -->
 
-The goal of mutagen is to provide extensions to dplyr’s `mutate()`.
+The goal of mutagen is to provide extensions to dplyr’s
+[`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html).
 
 mutagen provides simple-to-use functions as alternatives to complex R
 idioms for variable generation. Some mutagen functions are specific to
 problems encountered in R (e.g., working with list-columns in a data
 frame), while others solve more generic data science operations that are
 inspired by the excellent set of
-[`egen`](https://www.stata.com/manuals/degen.pdf) functions in Stata.
+[`egen`](https://www.stata.com/manuals/degen.pdf) (‘**e**xtensions to
+**gen**erate’) functions in Stata.
 
 ## Installation
 
@@ -56,7 +58,7 @@ mutagen, first **muta**te then **gen**erate.
 | mutagen function | R idiom | Stata function |
 |----|----|----|
 | `gen_na_listcol()`[^1] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
-| `gen_rowcount()`[^2] | `unlist(pmap(data, \(x) sum(list(x) %in% values)` | `egen anycount` |
+| `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
 
 ## Contributing
 
