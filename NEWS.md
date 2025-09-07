@@ -1,5 +1,7 @@
 ## mutagen (development version)
 
+* Added `gen_rowmatch()` (#13).
+* Added `gen_rowcount()` (#12).
 * Added epigraph to README (#10).
 * Added parallelization to README (#8, @ivelasq).
 * Added R-universe badge to README (#7).
