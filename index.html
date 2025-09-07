@@ -59,8 +59,8 @@
 <hr>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of mutagen is to provide extensions to dplyr’s <code>mutate()</code>.</p>
-<p>mutagen provides simple-to-use functions as alternatives to complex R idioms for variable generation. Some mutagen functions are specific to problems encountered in R (e.g., working with list-columns in a data frame), while others solve more generic data science operations that are inspired by the excellent set of <a href="https://www.stata.com/manuals/degen.pdf" class="external-link"><code>egen</code></a> functions in Stata.</p>
+<p>The goal of mutagen is to provide extensions to dplyr’s <a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link"><code>mutate()</code></a>.</p>
+<p>mutagen provides simple-to-use functions as alternatives to complex R idioms for variable generation. Some mutagen functions are specific to problems encountered in R (e.g., working with list-columns in a data frame), while others solve more generic data science operations that are inspired by the excellent set of <a href="https://www.stata.com/manuals/degen.pdf" class="external-link"><code>egen</code></a> (‘<strong>e</strong>xtensions to <strong>gen</strong>erate’) functions in Stata.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -96,7 +96,7 @@
 <td>
 <code><a href="reference/gen_rowcount.html">gen_rowcount()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>2</sup></a>
 </td>
-<td><code>unlist(pmap(data, \(x) sum(list(x) %in% values)</code></td>
+<td><code>pmap_int(data, \(cols) sum(list(cols) %in% values))</code></td>
 <td><code>egen anycount</code></td>
 </tr>
 </tbody>
