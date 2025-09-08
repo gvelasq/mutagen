@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_rowmatch.R
 \name{gen_rowmatch}
 \alias{gen_rowmatch}
-\title{Rowwise match a set of values}
+\title{Generate rowwise match of a set of values}
 \usage{
 gen_rowmatch(data, cols, values)
 }

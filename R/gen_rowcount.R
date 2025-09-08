@@ -1,4 +1,4 @@
-#' Rowwise count of the number of columns matching a set of values
+#' Generate rowwise count of columns matching a set of values
 #'
 #' This function performs a rowwise count of columns in a data frame that match a set of supplied values.
 #'

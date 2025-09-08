@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_na_listcol.R
 \name{gen_na_listcol}
 \alias{gen_na_listcol}
-\title{Replace NULLs in a list-column with NAs}
+\title{Generate a list-column with NULLs replaced with NAs}
 \usage{
 gen_na_listcol(x)
 }

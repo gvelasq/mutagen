@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_rowcount.R
 \name{gen_rowcount}
 \alias{gen_rowcount}
-\title{Rowwise count of the number of columns matching a set of values}
+\title{Generate rowwise count of columns matching a set of values}
 \usage{
 gen_rowcount(data, cols, values)
 }
