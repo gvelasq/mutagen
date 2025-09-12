@@ -63,6 +63,7 @@ mutagen, first **muta**te then **gen**erate.
 | `gen_rowlast()`[^2] | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))` | `egen rowlast` |
 | `gen_rownth()`[^2] | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))` | `N/A` |
 | `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
+| `gen_rowmax()`[^2] | `inject(pmax(!!!data, na.rm = TRUE))` | `egen rowmax` |
 | `gen_rowmin()`[^2] | `inject(pmin(!!!data, na.rm = TRUE))` | `egen rowmin` |
 
 ## Contributing
