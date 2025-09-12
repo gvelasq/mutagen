@@ -59,9 +59,10 @@ mutagen, first **muta**te then **gen**erate.
 |----|----|----|
 | `gen_na_listcol()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
 | `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
-| `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 | `gen_rowfirst()`[^2] | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))` | `egen rowfirst` |
 | `gen_rowlast()`[^2] | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))` | `egen rowlast` |
+| `gen_rownth()`[^2] | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))` | `N/A` |
+| `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 
 ## Contributing
 

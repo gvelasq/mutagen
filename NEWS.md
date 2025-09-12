@@ -1,5 +1,6 @@
 ## mutagen (development version)
 
+* Added `gen_rownth()` (#16).
 * Added `gen_rowlast()` (#15).
 * Added `gen_rowfirst()` (#14).
 * Added `gen_rowmatch()` (#13).
@@ -13,3 +14,4 @@
 
 ### New contributors
 * @ivelasq made their first contribution in https://github.com/gvelasq/mutagen/pull/3.
+* @delabj made their first contribution in https://github.com/gvelasq/mutagen/issues/1.
