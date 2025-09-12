@@ -128,6 +128,13 @@
 <td><code>pmap_int(data, \(cols) any(list(cols) %in% values))</code></td>
 <td><code>egen anymatch</code></td>
 </tr>
+<tr class="odd">
+<td>
+<code><a href="reference/gen_rowmin.html">gen_rowmin()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>8</sup></a>
+</td>
+<td><code>inject(pmin(!!!data, na.rm = TRUE))</code></td>
+<td><code>egen rowmin</code></td>
+</tr>
 </tbody>
 </table>
 </div>
