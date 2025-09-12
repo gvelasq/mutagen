@@ -1,5 +1,6 @@
 ## mutagen (development version)
 
+* Added `gen_rowlast()` (#15).
 * Added `gen_rowfirst()` (#14).
 * Added `gen_rowmatch()` (#13).
 * Added `gen_rowcount()` (#12).
