@@ -55,11 +55,12 @@ mutagen functions begin with the prefix `gen_*` and are designed to be
 used inside dplyr’s `mutate()`. A mnemonic for this is that to use
 mutagen, first **muta**te then **gen**erate.
 
-| mutagen function | R idiom | Stata function |
+| mutagen function | R idiom[^1] | Stata function |
 |----|----|----|
-| `gen_na_listcol()`[^1] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
-| `gen_rowcount()`[^1] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
-| `gen_rowmatch()`[^1] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
+| `gen_na_listcol()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
+| `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
+| `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
+| `gen_rowfirst()`[^2] | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))` | `egen rowfirst` |
 
 ## Contributing
 
@@ -67,5 +68,16 @@ Please note that the mutagen project is released with a [Contributor
 Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing to this
 project, you agree to abide by its terms.
 
-[^1]: Parallelization is supported via
+[^1]: The code shown in this column is pseudocode.
+
+[^2]: Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+[^2]: Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+[^2]: Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+[^2]: Parallelization is supported via
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
