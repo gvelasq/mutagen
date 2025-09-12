@@ -70,6 +70,77 @@ Please note that the mutagen project is released with a [Contributor
 Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing to this
 project, you agree to abide by its terms.
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+<!-- prettier-ignore-start -->
+
+<!-- markdownlint-disable -->
+
+All contributions to this project are gratefully acknowledged using the
+[`allcontributors` package](https://github.com/ropensci/allcontributors)
+following the [all-contributors](https://allcontributors.org)
+specification. Contributions of any kind are welcome!
+
+### Code
+
+<table>
+
+<tr>
+
+<td align="center">
+
+<a href="https://github.com/gvelasq">
+<img src="https://avatars.githubusercontent.com/u/20712598?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/gvelasq/mutagen/commits?author=gvelasq">gvelasq</a>
+</td>
+
+<td align="center">
+
+<a href="https://github.com/ivelasq">
+<img src="https://avatars.githubusercontent.com/u/12236152?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/gvelasq/mutagen/commits?author=ivelasq">ivelasq</a>
+</td>
+
+</tr>
+
+</table>
+
+### Issues
+
+<table>
+
+<tr>
+
+<td align="center">
+
+<a href="https://github.com/delabj">
+<img src="https://avatars.githubusercontent.com/u/46408036?u=67d80ea79824db5bf26e27d553294c48655965c6&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/gvelasq/mutagen/issues?q=is%3Aissue+author%3Adelabj">delabj</a>
+</td>
+
+<td align="center">
+
+<a href="https://github.com/thomascwells">
+<img src="https://avatars.githubusercontent.com/u/15213768?u=8878e3801c79df2745b97e78561e37022039324c&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/gvelasq/mutagen/issues?q=is%3Aissue+author%3Athomascwells">thomascwells</a>
+</td>
+
+</tr>
+
+</table>
+
+<!-- markdownlint-enable -->
+
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 [^1]: The code shown in this column is pseudocode.
 
 [^2]: Parallelization is supported via
