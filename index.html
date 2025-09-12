@@ -102,24 +102,31 @@
 </tr>
 <tr class="odd">
 <td>
-<code><a href="reference/gen_rowmatch.html">gen_rowmatch()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>4</sup></a>
-</td>
-<td><code>pmap_int(data, \(cols) any(list(cols) %in% values))</code></td>
-<td><code>egen anymatch</code></td>
-</tr>
-<tr class="even">
-<td>
-<code><a href="reference/gen_rowfirst.html">gen_rowfirst()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>5</sup></a>
+<code><a href="reference/gen_rowfirst.html">gen_rowfirst()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>4</sup></a>
 </td>
 <td><code>pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))</code></td>
 <td><code>egen rowfirst</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>
-<code><a href="reference/gen_rowlast.html">gen_rowlast()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>6</sup></a>
+<code><a href="reference/gen_rowlast.html">gen_rowlast()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>5</sup></a>
 </td>
 <td><code>pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))</code></td>
 <td><code>egen rowlast</code></td>
+</tr>
+<tr class="odd">
+<td>
+<code><a href="reference/gen_rownth.html">gen_rownth()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>6</sup></a>
+</td>
+<td><code>pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))</code></td>
+<td><code>N/A</code></td>
+</tr>
+<tr class="even">
+<td>
+<code><a href="reference/gen_rowmatch.html">gen_rowmatch()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>7</sup></a>
+</td>
+<td><code>pmap_int(data, \(cols) any(list(cols) %in% values))</code></td>
+<td><code>egen anymatch</code></td>
 </tr>
 </tbody>
 </table>
@@ -128,6 +135,39 @@
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
 </h2>
 <p>Please note that the mutagen project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+</div>
+<div class="section level2">
+<h2 id="contributors">Contributors<a class="anchor" aria-label="anchor" href="#contributors"></a>
+</h2>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<p>All contributions to this project are gratefully acknowledged using the <a href="https://github.com/ropensci/allcontributors" class="external-link"><code>allcontributors</code> package</a> following the <a href="https://allcontributors.org" class="external-link">all-contributors</a> specification. Contributions of any kind are welcome!</p>
+<div class="section level3">
+<h3 id="code">Code<a class="anchor" aria-label="anchor" href="#code"></a>
+</h3>
+<table class="table"><tr>
+<td align="center">
+<a href="https://github.com/gvelasq" class="external-link"> <img src="https://avatars.githubusercontent.com/u/20712598?v=4" width="100px;" alt=""></a><br><a href="https://github.com/gvelasq/mutagen/commits?author=gvelasq" class="external-link">gvelasq</a>
+</td>
+<td align="center">
+<a href="https://github.com/ivelasq" class="external-link"> <img src="https://avatars.githubusercontent.com/u/12236152?v=4" width="100px;" alt=""></a><br><a href="https://github.com/gvelasq/mutagen/commits?author=ivelasq" class="external-link">ivelasq</a>
+</td>
+</tr></table>
+</div>
+<div class="section level3">
+<h3 id="issues">Issues<a class="anchor" aria-label="anchor" href="#issues"></a>
+</h3>
+<table class="table"><tr>
+<td align="center">
+<a href="https://github.com/delabj" class="external-link"> <img src="https://avatars.githubusercontent.com/u/46408036?u=67d80ea79824db5bf26e27d553294c48655965c6&amp;v=4" width="100px;" alt=""></a><br><a href="https://github.com/gvelasq/mutagen/issues?q=is%3Aissue+author%3Adelabj" class="external-link">delabj</a>
+</td>
+<td align="center">
+<a href="https://github.com/thomascwells" class="external-link"> <img src="https://avatars.githubusercontent.com/u/15213768?u=8878e3801c79df2745b97e78561e37022039324c&amp;v=4" width="100px;" alt=""></a><br><a href="https://github.com/gvelasq/mutagen/issues?q=is%3Aissue+author%3Athomascwells" class="external-link">thomascwells</a>
+</td>
+</tr></table>
+<!-- markdownlint-enable --><!-- prettier-ignore-end --><!-- ALL-CONTRIBUTORS-LIST:END -->
+</div>
 </div>
 </div>
 
