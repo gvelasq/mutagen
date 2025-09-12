@@ -11,7 +11,8 @@ BugReports: https://github.com/gvelasq/mutagen/issues
 Depends: 
     R (>= 3.2)
 Imports: 
-    purrr
+    purrr,
+    rlang
 Suggests: 
     carrier,
     covr,
