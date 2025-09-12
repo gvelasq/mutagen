@@ -1,5 +1,6 @@
 ## mutagen (development version)
 
+* Added `gen_rowfirst()` (#14).
 * Added `gen_rowmatch()` (#13).
 * Added `gen_rowcount()` (#12).
 * Added epigraph to README (#10).
