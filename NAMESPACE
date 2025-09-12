@@ -3,4 +3,5 @@
 export(gen_na_listcol)
 export(gen_rowcount)
 export(gen_rowfirst)
+export(gen_rowlast)
 export(gen_rowmatch)

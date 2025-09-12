@@ -61,6 +61,7 @@ mutagen, first **muta**te then **gen**erate.
 | `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
 | `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 | `gen_rowfirst()`[^2] | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))` | `egen rowfirst` |
+| `gen_rowlast()`[^2] | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))` | `egen rowlast` |
 
 ## Contributing
 
@@ -69,15 +70,6 @@ Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing to this
 project, you agree to abide by its terms.
 
 [^1]: The code shown in this column is pseudocode.
-
-[^2]: Parallelization is supported via
-    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
-
-[^2]: Parallelization is supported via
-    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
-
-[^2]: Parallelization is supported via
-    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
 
 [^2]: Parallelization is supported via
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
