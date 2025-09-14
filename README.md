@@ -65,6 +65,7 @@ mutagen, first **muta**te then **gen**erate.
 | `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 | `gen_rowmax()` | `inject(pmax(!!!data, na.rm = TRUE))` | `egen rowmax` |
 | `gen_rowmean()`[^2] | `pmap_dbl(data, \(cols) mean(c(cols), na.rm = TRUE))` | `egen rowmean` |
+| `gen_rowmedian()`[^2] | `pmap_dbl(data, \(cols) median(c(cols), na.rm = TRUE))` | `egen rowmedian` |
 | `gen_rowmin()` | `inject(pmin(!!!data, na.rm = TRUE))` | `egen rowmin` |
 
 ## Contributing

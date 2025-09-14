@@ -1,5 +1,6 @@
 # mutagen (development version)
 
+* Added `gen_rowmedian()` (#20).
 * Added `gen_rowmean()` (#19).
 
 # mutagen 0.1.0
