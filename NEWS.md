@@ -1,5 +1,7 @@
 # mutagen (development version)
 
+* Added `gen_rowmean()` (#19).
+
 # mutagen 0.1.0
 
 * Added `gen_rowmax()` (#18).
@@ -17,5 +19,6 @@
 * Added a `NEWS.md` file to track changes to the package (#5).
 
 ## New contributors
+* @thomascwells made their first contribution in https://github.com/gvelasq/mutagen/issues/4.
 * @ivelasq made their first contribution in https://github.com/gvelasq/mutagen/pull/3.
 * @delabj made their first contribution in https://github.com/gvelasq/mutagen/issues/1.

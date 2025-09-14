@@ -57,6 +57,7 @@ mutagen functions begin with the prefix `gen_*` and are designed to be used insi
 | `gen_rownth()`[^2] | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))` | `N/A` |
 | `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 | `gen_rowmax()` | `inject(pmax(!!!data, na.rm = TRUE))` | `egen rowmax` |
+| `gen_rowmean()`[^2] | `pmap_dbl(data, \(cols) mean(c(cols), na.rm = TRUE))` | `egen rowmean` |
 | `gen_rowmin()` | `inject(pmin(!!!data, na.rm = TRUE))` | `egen rowmin` |
 
 ## Contributing
