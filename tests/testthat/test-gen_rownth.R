@@ -11,7 +11,7 @@ test_that("non-numeric objects, non-length 1 objects, and numeric objects not \\
   expect_error(gen_rownth(a, n = 1.5))
 })
 
-test_that("nth rowwise nonmissing value is correct", {
+test_that("rowwise nth nonmissing value is correct", {
   library(dplyr, warn.conflicts = FALSE)
   a <- tibble(x = c(1, NA, 2), y = c(NA, 3, NA), z = c(4, NA, 5))
   expect_equal(gen_rownth(a, n = 1), c(1, 3, 2))

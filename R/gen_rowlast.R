@@ -1,13 +1,13 @@
-#' Generate last rowwise nonmissing value
+#' Generate rowwise last nonmissing value
 #'
-#' This function returns the last rowwise nonmissing value in a data frame.
+#' This function returns the rowwise last nonmissing value in a data frame.
 #'
 #' Parallelization is supported via [`purrr::in_parallel()`](https://purrr.tidyverse.org/reference/in_parallel.html).
 #'
 #' @param data A data frame.
 #' @param cols <[`tidy-select`][dplyr::dplyr_tidy_select]> Columns to search across.
 #'
-#' @returns A vector of the last rowwise nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
+#' @returns A vector of the rowwise last nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
 #'
 #' @examples
 #' library(dplyr, warn.conflicts = FALSE)

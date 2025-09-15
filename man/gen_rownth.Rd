@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_rownth.R
 \name{gen_rownth}
 \alias{gen_rownth}
-\title{Generate nth rowwise nonmissing value}
+\title{Generate rowwise nth nonmissing value}
 \usage{
 gen_rownth(data, cols, n)
 }
@@ -11,13 +11,13 @@ gen_rownth(data, cols, n)
 
 \item{cols}{<\code{\link[dplyr:dplyr_tidy_select]{tidy-select}}> Columns to search across.}
 
-\item{n}{An integer vector of length 1 that specifies the position of the nth rowwise nonmissing value to search for. A negative integer will index from the end.}
+\item{n}{An integer vector of length 1 that specifies the position of the rowwise nth nonmissing value to search for. A negative integer will index from the end.}
 }
 \value{
-A vector of the nth rowwise nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
+A vector of the rowwise nth nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
 }
 \description{
-This function returns the nth rowwise nonmissing value in a data frame.
+This function returns the rowwise nth nonmissing value in a data frame.
 }
 \details{
 Parallelization is supported via \href{https://purrr.tidyverse.org/reference/in_parallel.html}{\code{purrr::in_parallel()}}.

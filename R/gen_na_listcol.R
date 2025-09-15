@@ -1,4 +1,4 @@
-#' Generate a list-column with NULLs replaced with NAs
+#' Generate list or list-column with NULLs replaced with NAs
 #'
 #' This function takes a list and replaces all `NULL` values with `NA`. It is useful for working with list-columns in a data frame.
 #'

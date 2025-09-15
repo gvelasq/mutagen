@@ -1,13 +1,13 @@
-#' Generate first rowwise nonmissing value
+#' Generate rowwise first nonmissing value
 #'
-#' This function returns the first rowwise nonmissing value in a data frame.
+#' This function returns the rowwise first nonmissing value in a data frame.
 #'
 #' Parallelization is supported via [`purrr::in_parallel()`](https://purrr.tidyverse.org/reference/in_parallel.html).
 #'
 #' @param data A data frame.
 #' @param cols <[`tidy-select`][dplyr::dplyr_tidy_select]> Columns to search across.
 #'
-#' @returns A vector of the first rowwise nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
+#' @returns A vector of the rowwise first nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
 #'
 #' @examples
 #' library(dplyr, warn.conflicts = FALSE)

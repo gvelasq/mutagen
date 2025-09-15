@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_rowfirst.R
 \name{gen_rowfirst}
 \alias{gen_rowfirst}
-\title{Generate first rowwise nonmissing value}
+\title{Generate rowwise first nonmissing value}
 \usage{
 gen_rowfirst(data, cols)
 }
@@ -12,10 +12,10 @@ gen_rowfirst(data, cols)
 \item{cols}{<\code{\link[dplyr:dplyr_tidy_select]{tidy-select}}> Columns to search across.}
 }
 \value{
-A vector of the first rowwise nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
+A vector of the rowwise first nonmissing value. The vector's type will be of common type to all rowwise nonmissing values.
 }
 \description{
-This function returns the first rowwise nonmissing value in a data frame.
+This function returns the rowwise first nonmissing value in a data frame.
 }
 \details{
 Parallelization is supported via \href{https://purrr.tidyverse.org/reference/in_parallel.html}{\code{purrr::in_parallel()}}.

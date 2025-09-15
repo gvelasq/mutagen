@@ -2,7 +2,7 @@ test_that("non-data frame objects passed to data argument fail", {
   expect_error(gen_rowfirst(letters[1:3]))
 })
 
-test_that("first rowwise nonmissing value is correct", {
+test_that("rowwise first nonmissing value is correct", {
   library(dplyr, warn.conflicts = FALSE)
   a <- tibble(x = c(1, NA, 2), y = c(NA, 3, NA), z = c(4, NA, 5))
   expect_equal(gen_rowfirst(a), c(1, 3, 2))
