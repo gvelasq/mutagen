@@ -12,7 +12,8 @@ Depends:
     R (>= 3.2)
 Imports: 
     purrr,
-    rlang
+    rlang,
+    stats
 Suggests: 
     carrier,
     covr,
