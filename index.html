@@ -152,6 +152,13 @@
 <td><code>inject(pmin(!!!data, na.rm = TRUE))</code></td>
 <td><code>egen rowmin</code></td>
 </tr>
+<tr class="odd">
+<td>
+<code><a href="reference/gen_rowmiss.html">gen_rowmiss()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>10</sup></a>
+</td>
+<td><code>pmap_int(data, \(cols) sum(!complete.cases(c(cols))))</code></td>
+<td><code>egen rowmiss</code></td>
+</tr>
 </tbody>
 </table>
 </div>
