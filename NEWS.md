@@ -1,5 +1,6 @@
 # mutagen (development version)
 
+* Added `gen_percent()` (#22).
 * Added `gen_rowmiss()` (#21).
 * Added `gen_rowmedian()` (#20).
 * Added `gen_rowmean()` (#19).
