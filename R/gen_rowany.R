@@ -20,15 +20,15 @@
 #' )
 #' val <- list(1, NA, "a", FALSE)
 #' val2 <- list(5, NaN, "d", Inf)
-#' gen_rowmatch(a, values = val)
+#' gen_rowany(a, values = val)
 #' b <- a %>%
 #'   mutate(
-#'     q = gen_rowmatch(., values = val),
-#'     r = gen_rowmatch(., values = val2)
+#'     q = gen_rowany(., values = val),
+#'     r = gen_rowany(., values = val2)
 #'   )
 #' b
 #' @export
-gen_rowmatch <- function(data, cols, values) {
+gen_rowany <- function(data, cols, values) {
   stopifnot("data must be a data frame" = is.data.frame(data))
   stopifnot("values must be a list" = is.list(values))
   if (!missing(cols)) {
