@@ -37,7 +37,7 @@ problems encountered in R (e.g., working with list-columns in a data
 frame), while others solve more generic data science operations that are
 inspired by the excellent set of
 [`egen`](https://www.stata.com/manuals/degen.pdf) (‘**e**xtensions to
-**gen**erate’) functions in Stata.
+**gen**erate’) and [`egenmore`](https://ideas.repec.org/c/boc/bocode/s386401.html) functions in Stata.
 
 ## Installation
 
@@ -59,7 +59,7 @@ mutagen, first **muta**te then **gen**erate.
 |----|----|----|
 | `gen_na_listcol()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
 | `gen_percent()` | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc` |
-| `gen_rowany()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
+| `gen_rowany()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch`, `egenmore rany` |
 | `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
 | `gen_rowfirst()`[^2] | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))` | `egen rowfirst` |
 | `gen_rowlast()`[^2] | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))` | `egen rowlast` |
