@@ -1,5 +1,6 @@
 # mutagen (development version)
 
+* Added mention of egenmore to README (#24).
 * Renamed `gen_rowmatch()` to `gen_rowany()` (#23).
 * Added `gen_percent()` (#22).
 * Added `gen_rowmiss()` (#21).
