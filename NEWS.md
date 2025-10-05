@@ -1,5 +1,6 @@
 # mutagen (development version)
 
+* Renamed `gen_rowmatch()` to `gen_rowany()` (#23).
 * Added `gen_percent()` (#22).
 * Added `gen_rowmiss()` (#21).
 * Added `gen_rowmedian()` (#20).

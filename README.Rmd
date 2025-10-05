@@ -52,11 +52,11 @@ mutagen functions begin with the prefix `gen_*` and are designed to be used insi
 |----|----|----|
 | `gen_na_listcol()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
 | `gen_percent()`[^2] | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc` |
+| `gen_rowany()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 | `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount` |
 | `gen_rowfirst()`[^2] | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))` | `egen rowfirst` |
 | `gen_rowlast()`[^2] | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))` | `egen rowlast` |
 | `gen_rownth()`[^2] | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))` | `N/A` |
-| `gen_rowmatch()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch` |
 | `gen_rowmax()` | `inject(pmax(!!!data, na.rm = TRUE))` | `egen rowmax` |
 | `gen_rowmean()`[^2] | `pmap_dbl(data, \(cols) mean(c(cols), na.rm = TRUE))` | `egen rowmean` |
 | `gen_rowmedian()`[^2] | `pmap_dbl(data, \(cols) median(c(cols), na.rm = TRUE))` | `egen rowmedian` |
