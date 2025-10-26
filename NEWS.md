@@ -1,4 +1,4 @@
-# mutagen (development version)
+# mutagen 0.2.0
 
 * Added the R-hub v2 workflow (#25).
 * Added mention of egenmore to README (#24).
