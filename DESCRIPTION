@@ -11,7 +11,7 @@ BugReports: https://github.com/gvelasq/mutagen/issues
 Depends: 
     R (>= 3.2)
 Imports: 
-    purrr,
+    purrr (>= 1.1.0),
     rlang,
     stats
 Suggests: 
