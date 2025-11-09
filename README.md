@@ -69,6 +69,7 @@ mutagen, first **muta**te then **gen**erate.
 | `gen_rowmedian()`[^2] | `pmap_dbl(data, \(cols) median(c(cols), na.rm = TRUE))` | `egen rowmedian()` |
 | `gen_rowmin()` | `inject(pmin(!!!data, na.rm = TRUE))` | `egen rowmin()` |
 | `gen_rowmiss()`[^2] | `pmap_int(data, \(cols) sum(!complete.cases(c(cols))))` | `egen rowmiss()` |
+| `gen_rownonmiss()`[^2] | `pmap_int(data, \(cols) sum(complete.cases(c(cols))))` | `egen rownonmiss()` |
 | `gen_rownth()`[^2] | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))` | `N/A` |
 
 ## Contributing
