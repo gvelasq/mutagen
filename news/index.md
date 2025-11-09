@@ -2,6 +2,10 @@
 
 ## mutagen (development version)
 
+- Added
+  [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)
+  ([\#26](https://github.com/gvelasq/mutagen/issues/26)).
+
 ## mutagen 0.2.0
 
 - Added the R-hub v2 workflow

@@ -6,6 +6,8 @@
   : Generate list or list-column with NULLs replaced with NAs
 - [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)
   : Generate column percent
+- [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)
+  : Generate rowwise match of all values
 - [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)
   : Generate rowwise match of any values
 - [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)

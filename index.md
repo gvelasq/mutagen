@@ -44,16 +44,17 @@ mutagen, first **muta**te then **gen**erate.
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------|----------------------------------------|
 | [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)[²](#fn2) | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))`        | `N/A`                                  |
 | [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)                | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()`                            |
-| [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)[³](#fn3)         | `pmap_int(data, \(cols) any(list(cols) %in% values))`        | `egen anymatch()`, `egenmore rany()`   |
-| [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)[⁴](#fn4)     | `pmap_int(data, \(cols) sum(list(cols) %in% values))`        | `egen anycount()`, `egenmore rcount()` |
-| [`gen_rowfirst()`](https://gvelasq.github.io/mutagen/reference/gen_rowfirst.md)[⁵](#fn5)     | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))`       | `egen rowfirst()`                      |
-| [`gen_rowlast()`](https://gvelasq.github.io/mutagen/reference/gen_rowlast.md)[⁶](#fn6)       | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))`        | `egen rowlast()`                       |
+| [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)[³](#fn3)         | `pmap_int(data, \(cols) all(list(cols) %in% values))`        | `egenmore rall()`                      |
+| [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)[⁴](#fn4)         | `pmap_int(data, \(cols) any(list(cols) %in% values))`        | `egen anymatch()`, `egenmore rany()`   |
+| [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)[⁵](#fn5)     | `pmap_int(data, \(cols) sum(list(cols) %in% values))`        | `egen anycount()`, `egenmore rcount()` |
+| [`gen_rowfirst()`](https://gvelasq.github.io/mutagen/reference/gen_rowfirst.md)[⁶](#fn6)     | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))`       | `egen rowfirst()`                      |
+| [`gen_rowlast()`](https://gvelasq.github.io/mutagen/reference/gen_rowlast.md)[⁷](#fn7)       | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))`        | `egen rowlast()`                       |
 | [`gen_rowmax()`](https://gvelasq.github.io/mutagen/reference/gen_rowmax.md)                  | `inject(pmax(!!!data, na.rm = TRUE))`                        | `egen rowmax()`                        |
-| [`gen_rowmean()`](https://gvelasq.github.io/mutagen/reference/gen_rowmean.md)[⁷](#fn7)       | `pmap_dbl(data, \(cols) mean(c(cols), na.rm = TRUE))`        | `egen rowmean()`                       |
-| [`gen_rowmedian()`](https://gvelasq.github.io/mutagen/reference/gen_rowmedian.md)[⁸](#fn8)   | `pmap_dbl(data, \(cols) median(c(cols), na.rm = TRUE))`      | `egen rowmedian()`                     |
+| [`gen_rowmean()`](https://gvelasq.github.io/mutagen/reference/gen_rowmean.md)[⁸](#fn8)       | `pmap_dbl(data, \(cols) mean(c(cols), na.rm = TRUE))`        | `egen rowmean()`                       |
+| [`gen_rowmedian()`](https://gvelasq.github.io/mutagen/reference/gen_rowmedian.md)[⁹](#fn9)   | `pmap_dbl(data, \(cols) median(c(cols), na.rm = TRUE))`      | `egen rowmedian()`                     |
 | [`gen_rowmin()`](https://gvelasq.github.io/mutagen/reference/gen_rowmin.md)                  | `inject(pmin(!!!data, na.rm = TRUE))`                        | `egen rowmin()`                        |
-| [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)[⁹](#fn9)       | `pmap_int(data, \(cols) sum(!complete.cases(c(cols))))`      | `egen rowmiss()`                       |
-| [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)[¹⁰](#fn10)       | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))`      | `N/A`                                  |
+| [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)[¹⁰](#fn10)     | `pmap_int(data, \(cols) sum(!complete.cases(c(cols))))`      | `egen rowmiss()`                       |
+| [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)[¹¹](#fn11)       | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))`      | `N/A`                                  |
 
 ## Contributing
 
@@ -105,4 +106,7 @@ specification. Contributions of any kind are welcome!
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
 
 10. Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+11. Parallelization is supported via
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
