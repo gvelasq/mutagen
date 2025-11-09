@@ -2,7 +2,7 @@
 % Please edit documentation in R/gen_rowany.R
 \name{gen_rowany}
 \alias{gen_rowany}
-\title{Generate rowwise match of a set of values}
+\title{Generate rowwise match of any values}
 \usage{
 gen_rowany(data, cols, values)
 }
@@ -14,10 +14,10 @@ gen_rowany(data, cols, values)
 \item{values}{A list of values to match.}
 }
 \value{
-A binary integer vector indicating whether any supplied value was matched with an integer 1 (\code{1L}), otherwise it returns an integer 0 (\code{0L}).
+A binary integer vector indicating whether any supplied values were matched with an integer 1 (\code{1L}), otherwise it returns an integer 0 (\code{0L}).
 }
 \description{
-This function performs a rowwise match of a set of supplied values across columns in a data frame. If any of the row values equal one of the supplied values, this function returns an integer 1 (\code{1L}) for that row, otherwise it returns an integer 0 (\code{0L}).
+This function performs a rowwise match of any supplied values across columns in a data frame. If any of the row values equal one of the supplied values, this function returns an integer 1 (\code{1L}) for that row, otherwise it returns an integer 0 (\code{0L}).
 }
 \details{
 Parallelization is supported via \href{https://purrr.tidyverse.org/reference/in_parallel.html}{\code{purrr::in_parallel()}}.

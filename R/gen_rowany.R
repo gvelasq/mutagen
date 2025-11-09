@@ -1,6 +1,6 @@
-#' Generate rowwise match of a set of values
+#' Generate rowwise match of any values
 #'
-#' This function performs a rowwise match of a set of supplied values across columns in a data frame. If any of the row values equal one of the supplied values, this function returns an integer 1 (`1L`) for that row, otherwise it returns an integer 0 (`0L`).
+#' This function performs a rowwise match of any supplied values across columns in a data frame. If any of the row values equal one of the supplied values, this function returns an integer 1 (`1L`) for that row, otherwise it returns an integer 0 (`0L`).
 #'
 #' Parallelization is supported via [`purrr::in_parallel()`](https://purrr.tidyverse.org/reference/in_parallel.html).
 #'
@@ -8,7 +8,7 @@
 #' @param cols <[`tidy-select`][dplyr::dplyr_tidy_select]> Columns to search across.
 #' @param values A list of values to match.
 #'
-#' @returns A binary integer vector indicating whether any supplied value was matched with an integer 1 (`1L`), otherwise it returns an integer 0 (`0L`).
+#' @returns A binary integer vector indicating whether any supplied values were matched with an integer 1 (`1L`), otherwise it returns an integer 0 (`0L`).
 #'
 #' @examples
 #' library(dplyr, warn.conflicts = FALSE)

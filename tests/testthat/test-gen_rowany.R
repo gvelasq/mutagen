@@ -6,7 +6,7 @@ test_that("non-list objects passed to values argument fail", {
   expect_error(gen_rowany(mtcars, values = letters[1:3]))
 })
 
-test_that("row count is correct", {
+test_that("rowwise match of any supplied values is correct", {
   library(dplyr, warn.conflicts = FALSE)
   a <- tibble(x = 1:3, y = rep(NA, 3), z = letters[1:3], aa = rep(FALSE, 3))
   val <- list(1, NA, "a", FALSE)
