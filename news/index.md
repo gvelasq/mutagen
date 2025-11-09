@@ -3,6 +3,9 @@
 ## mutagen (development version)
 
 - Added
+  [`gen_rownonmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rownonmiss.md)
+  ([\#27](https://github.com/gvelasq/mutagen/issues/27)).
+- Added
   [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)
   ([\#26](https://github.com/gvelasq/mutagen/issues/26)).
 

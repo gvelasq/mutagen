@@ -170,7 +170,14 @@
 </tr>
 <tr class="odd">
 <td>
-<code><a href="reference/gen_rownth.html">gen_rownth()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>11</sup></a>
+<code><a href="reference/gen_rownonmiss.html">gen_rownonmiss()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>11</sup></a>
+</td>
+<td><code>pmap_int(data, \(cols) sum(complete.cases(c(cols))))</code></td>
+<td><code>egen rownonmiss()</code></td>
+</tr>
+<tr class="even">
+<td>
+<code><a href="reference/gen_rownth.html">gen_rownth()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>12</sup></a>
 </td>
 <td><code>pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))</code></td>
 <td><code>N/A</code></td>

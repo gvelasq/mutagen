@@ -26,5 +26,7 @@
   : Generate rowwise minimum value
 - [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)
   : Generate rowwise count of missing values
+- [`gen_rownonmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rownonmiss.md)
+  : Generate rowwise count of nonmissing values
 - [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)
   : Generate rowwise nth nonmissing value
