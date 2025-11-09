@@ -1,6 +1,6 @@
 # Changelog
 
-## mutagen (development version)
+## mutagen 0.3.0
 
 - Added
   [`gen_rownonmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rownonmiss.md)
