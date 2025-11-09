@@ -1,9 +1,9 @@
-# Generate rowwise match of a set of values
+# Generate rowwise match of any values
 
-This function performs a rowwise match of a set of supplied values
-across columns in a data frame. If any of the row values equal one of
-the supplied values, this function returns an integer 1 (`1L`) for that
-row, otherwise it returns an integer 0 (`0L`).
+This function performs a rowwise match of any supplied values across
+columns in a data frame. If any of the row values equal one of the
+supplied values, this function returns an integer 1 (`1L`) for that row,
+otherwise it returns an integer 0 (`0L`).
 
 ## Usage
 
@@ -28,7 +28,7 @@ gen_rowany(data, cols, values)
 
 ## Value
 
-A binary integer vector indicating whether any supplied value was
+A binary integer vector indicating whether any supplied values were
 matched with an integer 1 (`1L`), otherwise it returns an integer 0
 (`0L`).
 

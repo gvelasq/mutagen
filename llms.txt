@@ -116,7 +116,7 @@ specification. Contributions of any kind are welcome!
 - [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)
   : Generate column percent
 - [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)
-  : Generate rowwise match of a set of values
+  : Generate rowwise match of any values
 - [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)
   : Generate rowwise count of columns matching a set of values
 - [`gen_rowfirst()`](https://gvelasq.github.io/mutagen/reference/gen_rowfirst.md)
