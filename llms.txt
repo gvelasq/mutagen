@@ -1,0 +1,138 @@
+# mutagen
+
+> The issue is of human time rather than silicon chip time. Human time
+> can be wasted by taking longer to write the code, and (often much more
+> importantly) by taking more time to understand subsequently what it
+> does.
+>
+> – [*The R
+> Inferno*](https://www.burns-stat.com/documents/books/the-r-inferno)
+> *(Patrick Burns, 2011)*
+
+------------------------------------------------------------------------
+
+The goal of mutagen is to provide extensions to dplyr’s
+[`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html).
+
+mutagen provides simple-to-use functions as alternatives to complex R
+idioms for variable generation. Some mutagen functions are specific to
+problems encountered in R (e.g., working with list-columns in a data
+frame), while others solve more generic data science operations that are
+inspired by the excellent set of
+[`egen`](https://www.stata.com/manuals/degen.pdf) (‘**e**xtensions to
+**gen**erate’) and
+[`egenmore`](https://ideas.repec.org/c/boc/bocode/s386401.html)
+functions in Stata.
+
+## Installation
+
+You can install the development version of mutagen from
+[GitHub](https://github.com) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("gvelasq/mutagen")
+```
+
+## Usage
+
+mutagen functions begin with the prefix `gen_*` and are designed to be
+used inside dplyr’s `mutate()`. A mnemonic for this is that to use
+mutagen, first **muta**te then **gen**erate.
+
+| mutagen function                                                                             | R idiom[¹](#fn1)                                             | Stata function                         |
+|----------------------------------------------------------------------------------------------|--------------------------------------------------------------|----------------------------------------|
+| [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)[²](#fn2) | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))`        | `N/A`                                  |
+| [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)                | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()`                            |
+| [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)[³](#fn3)         | `pmap_int(data, \(cols) any(list(cols) %in% values))`        | `egen anymatch()`, `egenmore rany()`   |
+| [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)[⁴](#fn4)     | `pmap_int(data, \(cols) sum(list(cols) %in% values))`        | `egen anycount()`, `egenmore rcount()` |
+| [`gen_rowfirst()`](https://gvelasq.github.io/mutagen/reference/gen_rowfirst.md)[⁵](#fn5)     | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))`       | `egen rowfirst()`                      |
+| [`gen_rowlast()`](https://gvelasq.github.io/mutagen/reference/gen_rowlast.md)[⁶](#fn6)       | `pmap_vec(data, \(cols) last(c(cols), na_rm = TRUE))`        | `egen rowlast()`                       |
+| [`gen_rowmax()`](https://gvelasq.github.io/mutagen/reference/gen_rowmax.md)                  | `inject(pmax(!!!data, na.rm = TRUE))`                        | `egen rowmax()`                        |
+| [`gen_rowmean()`](https://gvelasq.github.io/mutagen/reference/gen_rowmean.md)[⁷](#fn7)       | `pmap_dbl(data, \(cols) mean(c(cols), na.rm = TRUE))`        | `egen rowmean()`                       |
+| [`gen_rowmedian()`](https://gvelasq.github.io/mutagen/reference/gen_rowmedian.md)[⁸](#fn8)   | `pmap_dbl(data, \(cols) median(c(cols), na.rm = TRUE))`      | `egen rowmedian()`                     |
+| [`gen_rowmin()`](https://gvelasq.github.io/mutagen/reference/gen_rowmin.md)                  | `inject(pmin(!!!data, na.rm = TRUE))`                        | `egen rowmin()`                        |
+| [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)[⁹](#fn9)       | `pmap_int(data, \(cols) sum(!complete.cases(c(cols))))`      | `egen rowmiss()`                       |
+| [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)[¹⁰](#fn10)       | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))`      | `N/A`                                  |
+
+## Contributing
+
+Please note that the mutagen project is released with a [Contributor
+Code of Conduct](https://gvelasq.github.io/mutagen/CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
+
+## Contributors
+
+All contributions to this project are gratefully acknowledged using the
+[`allcontributors` package](https://github.com/ropensci/allcontributors)
+following the [all-contributors](https://allcontributors.org)
+specification. Contributions of any kind are welcome!
+
+### Code
+
+[TABLE]
+
+### Issues
+
+[TABLE]
+
+------------------------------------------------------------------------
+
+1.  The code shown in this column is pseudocode.
+
+2.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+3.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+4.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+5.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+6.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+7.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+8.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+9.  Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+10. Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+# Package index
+
+## All functions
+
+- [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)
+  : Generate list or list-column with NULLs replaced with NAs
+- [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)
+  : Generate column percent
+- [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)
+  : Generate rowwise match of a set of values
+- [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)
+  : Generate rowwise count of columns matching a set of values
+- [`gen_rowfirst()`](https://gvelasq.github.io/mutagen/reference/gen_rowfirst.md)
+  : Generate rowwise first nonmissing value
+- [`gen_rowlast()`](https://gvelasq.github.io/mutagen/reference/gen_rowlast.md)
+  : Generate rowwise last nonmissing value
+- [`gen_rowmax()`](https://gvelasq.github.io/mutagen/reference/gen_rowmax.md)
+  : Generate rowwise maximum value
+- [`gen_rowmean()`](https://gvelasq.github.io/mutagen/reference/gen_rowmean.md)
+  : Generate rowwise mean
+- [`gen_rowmedian()`](https://gvelasq.github.io/mutagen/reference/gen_rowmedian.md)
+  : Generate rowwise median
+- [`gen_rowmin()`](https://gvelasq.github.io/mutagen/reference/gen_rowmin.md)
+  : Generate rowwise minimum value
+- [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)
+  : Generate rowwise count of missing values
+- [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)
+  : Generate rowwise nth nonmissing value
+
