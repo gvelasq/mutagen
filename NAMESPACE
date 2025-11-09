@@ -2,6 +2,7 @@
 
 export(gen_na_listcol)
 export(gen_percent)
+export(gen_rowall)
 export(gen_rowany)
 export(gen_rowcount)
 export(gen_rowfirst)
