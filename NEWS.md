@@ -1,4 +1,4 @@
-# mutagen (development version)
+# mutagen 0.3.0
 
 * Added `gen_rownonmiss()` (#27).
 * Added `gen_rowall()` (#26).
