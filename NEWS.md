@@ -1,5 +1,7 @@
 # mutagen (development version)
 
+* Added `gen_rowall()` (#26).
+
 # mutagen 0.2.0
 
 * Added the R-hub v2 workflow (#25).

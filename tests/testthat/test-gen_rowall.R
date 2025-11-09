@@ -1,0 +1,29 @@
+test_that("non-data frame objects passed to data argument fail", {
+  expect_error(gen_rowall(letters[1:3], values = letters[1:3]))
+})
+
+test_that("non-list objects passed to values argument fail", {
+  expect_error(gen_rowall(mtcars, values = letters[1:3]))
+})
+
+test_that("rowwise match of all supplied values is correct", {
+  library(dplyr, warn.conflicts = FALSE)
+  a <- tibble(x = 1:3, y = rep(NA, 3), z = letters[1:3], aa = rep(FALSE, 3))
+  val <- list(1, NA, "a", FALSE)
+  val2 <- list(3, NA, "c", FALSE)
+  expect_equal(gen_rowall(a, values = val), c(1L, 0L, 0L))
+  expect_equal(gen_rowall(a, everything(), values = val), c(1L, 0L, 0L))
+  expect_equal(gen_rowall(a, starts_with(letters[25:26]), values = val), c(1L, 0L, 0L))
+  b <- a %>% mutate(q = gen_rowall(., values = val), r = gen_rowall(., values = val2))
+  expect_equal(b[["q"]], c(1L, 0L, 0L))
+  expect_equal(b[["r"]], c(0L, 0L, 1L))
+})
+
+test_that("parallelization works", {
+  library(dplyr, warn.conflicts = FALSE)
+  mirai::daemons(0)
+  mirai::daemons(parallel::detectCores() - 1)
+  a <- tibble(x = 1:3, y = rep(NA, 3), z = letters[1:3], aa = rep(FALSE, 3))
+  val <- list(1, NA, "a", FALSE)
+  expect_equal(gen_rowall(a, values = val), c(1L, 0L, 0L))
+})

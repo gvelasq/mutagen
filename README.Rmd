@@ -52,6 +52,7 @@ mutagen functions begin with the prefix `gen_*` and are designed to be used insi
 |----|----|----|
 | `gen_na_listcol()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
 | `gen_percent()` | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()` |
+| `gen_rowall()`[^2] | `pmap_int(data, \(cols) all(list(cols) %in% values))` | `egenmore rall()` |
 | `gen_rowany()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch()`, `egenmore rany()` |
 | `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount()`, `egenmore rcount()` |
 | `gen_rowfirst()`[^2] | `pmap_vec(data, \(cols) first(c(cols), na_rm = TRUE))` | `egen rowfirst()` |
