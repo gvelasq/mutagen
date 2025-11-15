@@ -1,5 +1,7 @@
 # mutagen (development version)
 
+* Added `gen_rowsum()` (#28).
+
 # mutagen 0.3.0
 
 * Added `gen_rownonmiss()` (#27).

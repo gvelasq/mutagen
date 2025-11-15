@@ -71,6 +71,7 @@ mutagen, first **muta**te then **gen**erate.
 | `gen_rowmiss()`[^2] | `pmap_int(data, \(cols) sum(!complete.cases(c(cols))))` | `egen rowmiss()` |
 | `gen_rownonmiss()`[^2] | `pmap_int(data, \(cols) sum(complete.cases(c(cols))))` | `egen rownonmiss()` |
 | `gen_rownth()`[^2] | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))` | `N/A` |
+| `gen_rowsum()`[^2] | `pmap_vec(data, \(cols) sum(cols, na.rm = TRUE))` | `egen rowtotal(), egenmore rsum2()` |
 
 ## Contributing
 
