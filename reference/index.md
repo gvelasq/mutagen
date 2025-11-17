@@ -30,5 +30,7 @@
   : Generate rowwise count of nonmissing values
 - [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)
   : Generate rowwise nth nonmissing value
+- [`gen_rowsd()`](https://gvelasq.github.io/mutagen/reference/gen_rowsd.md)
+  : Generate rowwise standard deviation
 - [`gen_rowsum()`](https://gvelasq.github.io/mutagen/reference/gen_rowsum.md)
   : Generate rowwise sum

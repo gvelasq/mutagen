@@ -3,6 +3,9 @@
 ## mutagen (development version)
 
 - Added
+  [`gen_rowsd()`](https://gvelasq.github.io/mutagen/reference/gen_rowsd.md)
+  ([\#29](https://github.com/gvelasq/mutagen/issues/29)).
+- Added
   [`gen_rowsum()`](https://gvelasq.github.io/mutagen/reference/gen_rowsum.md)
   ([\#28](https://github.com/gvelasq/mutagen/issues/28)).
 

@@ -57,6 +57,7 @@ mutagen, first **muta**te then **gen**erate.
 | [`gen_rownonmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rownonmiss.md)[¹¹](#fn11) | `pmap_int(data, \(cols) sum(complete.cases(c(cols))))`       | `egen rownonmiss()`                    |
 | [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)[¹²](#fn12)         | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))`      | `N/A`                                  |
 | [`gen_rowsum()`](https://gvelasq.github.io/mutagen/reference/gen_rowsum.md)[¹³](#fn13)         | `pmap_vec(data, \(cols) sum(cols, na.rm = TRUE))`            | `egen rowtotal(), egenmore rsum2()`    |
+| [`gen_rowsd()`](https://gvelasq.github.io/mutagen/reference/gen_rowsd.md)[¹⁴](#fn14)           | `pmap_dbl(data, \(cols) sd(c(cols), na.rm = TRUE))`          | `egen rowsd()`                         |
 
 ## Contributing
 
@@ -117,4 +118,7 @@ specification. Contributions of any kind are welcome!
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
 
 13. Parallelization is supported via
+    [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
+
+14. Parallelization is supported via
     [purrr::in_parallel()](https://purrr.tidyverse.org/reference/in_parallel.html).
