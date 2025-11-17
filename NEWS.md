@@ -1,4 +1,4 @@
-# mutagen (development version)
+# mutagen 0.4.0
 
 * Added `gen_rowsd()` (#29).
 * Added `gen_rowsum()` (#28).

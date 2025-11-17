@@ -1,6 +1,6 @@
 Package: mutagen
 Title: Extensions to dplyr's mutate
-Version: 0.3.0.9000
+Version: 0.4.0
 Authors@R: 
     person("Gustavo", "Velásquez", , "gvelasq2github@gmail.com", role = c("aut", "cre"))
 Description: Extensions to dplyr's mutate.
