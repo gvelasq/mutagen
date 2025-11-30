@@ -1,6 +1,6 @@
 # mutagen (development version)
 
-* Renamed `gen_na_listcol()` to `gen_listcol_na()` (#31).
+* Renamed `gen_na_listcol()` to `gen_listcol_na()` (#32).
 * Renamed `gen_percent()` to `gen_colpercent()` (#30).
 
 # mutagen 0.4.0
