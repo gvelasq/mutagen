@@ -2,10 +2,10 @@
 
 ## All functions
 
+- [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)
+  : Generate column percent
 - [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)
   : Generate list or list-column with NULLs replaced with NAs
-- [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)
-  : Generate column percent
 - [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)
   : Generate rowwise match of all values
 - [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)

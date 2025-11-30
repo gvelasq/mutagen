@@ -87,16 +87,16 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td><code><a href="reference/gen_colpercent.html">gen_colpercent()</a></code></td>
+<td><code>mutate(data, pct = col / sum(col) * 100, .by = group_cols)</code></td>
+<td><code>egen pc()</code></td>
+</tr>
+<tr class="even">
 <td>
 <code><a href="reference/gen_na_listcol.html">gen_na_listcol()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>2</sup></a>
 </td>
 <td><code>modify_tree(leaf = \(x) replace(x, is.null(x), NA))</code></td>
 <td><code>N/A</code></td>
-</tr>
-<tr class="even">
-<td><code><a href="reference/gen_percent.html">gen_percent()</a></code></td>
-<td><code>mutate(data, pct = col / sum(col) * 100, .by = group_cols)</code></td>
-<td><code>egen pc()</code></td>
 </tr>
 <tr class="odd">
 <td>
@@ -187,7 +187,9 @@
 <code><a href="reference/gen_rowsum.html">gen_rowsum()</a></code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Parallelization is supported via &lt;a href="https://purrr.tidyverse.org/reference/in_parallel.html" class="external-link"&gt;purrr::in_parallel()&lt;/a&gt;.&lt;/p&gt;'><sup>13</sup></a>
 </td>
 <td><code>pmap_vec(data, \(cols) sum(cols, na.rm = TRUE))</code></td>
-<td><code>egen rowtotal(), egenmore rsum2()</code></td>
+<td>
+<code>egen rowtotal()</code>, <code>egenmore rsum2()</code>
+</td>
 </tr>
 <tr class="even">
 <td>

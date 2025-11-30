@@ -2,6 +2,10 @@
 
 ## mutagen (development version)
 
+- Renamed `gen_percent()` to
+  [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)
+  ([\#30](https://github.com/gvelasq/mutagen/issues/30)).
+
 ## mutagen 0.4.0
 
 - Added
@@ -24,13 +28,12 @@
 
 - Added the R-hub v2 workflow
   ([\#25](https://github.com/gvelasq/mutagen/issues/25)).
-- Added mention of egenmore to README
+- Added egenmore to README
   ([\#24](https://github.com/gvelasq/mutagen/issues/24)).
 - Renamed `gen_rowmatch()` to
   [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)
   ([\#23](https://github.com/gvelasq/mutagen/issues/23)).
-- Added
-  [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)
+- Added `gen_percent()`
   ([\#22](https://github.com/gvelasq/mutagen/issues/22)).
 - Added
   [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)

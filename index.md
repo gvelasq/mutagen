@@ -42,8 +42,8 @@ mutagen, first **muta**te then **gen**erate.
 
 | mutagen function                                                                               | R idiom[¹](#fn1)                                             | Stata function                         |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------|----------------------------------------|
+| [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)            | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()`                            |
 | [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)[²](#fn2)   | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))`        | `N/A`                                  |
-| [`gen_percent()`](https://gvelasq.github.io/mutagen/reference/gen_percent.md)                  | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()`                            |
 | [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)[³](#fn3)           | `pmap_int(data, \(cols) all(list(cols) %in% values))`        | `egenmore rall()`                      |
 | [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)[⁴](#fn4)           | `pmap_int(data, \(cols) any(list(cols) %in% values))`        | `egen anymatch()`, `egenmore rany()`   |
 | [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)[⁵](#fn5)       | `pmap_int(data, \(cols) sum(list(cols) %in% values))`        | `egen anycount()`, `egenmore rcount()` |
@@ -56,7 +56,7 @@ mutagen, first **muta**te then **gen**erate.
 | [`gen_rowmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rowmiss.md)[¹⁰](#fn10)       | `pmap_int(data, \(cols) sum(!complete.cases(c(cols))))`      | `egen rowmiss()`                       |
 | [`gen_rownonmiss()`](https://gvelasq.github.io/mutagen/reference/gen_rownonmiss.md)[¹¹](#fn11) | `pmap_int(data, \(cols) sum(complete.cases(c(cols))))`       | `egen rownonmiss()`                    |
 | [`gen_rownth()`](https://gvelasq.github.io/mutagen/reference/gen_rownth.md)[¹²](#fn12)         | `pmap_vec(data, \(cols) nth(c(cols), n, na_rm = TRUE))`      | `N/A`                                  |
-| [`gen_rowsum()`](https://gvelasq.github.io/mutagen/reference/gen_rowsum.md)[¹³](#fn13)         | `pmap_vec(data, \(cols) sum(cols, na.rm = TRUE))`            | `egen rowtotal(), egenmore rsum2()`    |
+| [`gen_rowsum()`](https://gvelasq.github.io/mutagen/reference/gen_rowsum.md)[¹³](#fn13)         | `pmap_vec(data, \(cols) sum(cols, na.rm = TRUE))`            | `egen rowtotal()`, `egenmore rsum2()`  |
 | [`gen_rowsd()`](https://gvelasq.github.io/mutagen/reference/gen_rowsd.md)[¹⁴](#fn14)           | `pmap_dbl(data, \(cols) sd(c(cols), na.rm = TRUE))`          | `egen rowsd()`                         |
 
 ## Contributing
