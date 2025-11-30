@@ -2,6 +2,9 @@
 
 ## mutagen (development version)
 
+- Renamed `gen_na_listcol()` to
+  [`gen_listcol_na()`](https://gvelasq.github.io/mutagen/reference/gen_listcol_na.md)
+  ([\#31](https://github.com/gvelasq/mutagen/issues/31)).
 - Renamed `gen_percent()` to
   [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)
   ([\#30](https://github.com/gvelasq/mutagen/issues/30)).
@@ -74,8 +77,7 @@
   [@ivelasq](https://github.com/ivelasq)).
 - Added R-universe badge to README
   ([\#7](https://github.com/gvelasq/mutagen/issues/7)).
-- Added
-  [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)
+- Added `gen_na_listcol()`
   ([\#6](https://github.com/gvelasq/mutagen/issues/6)).
 - Updated usethis helpers to usethis 3.1.0
   ([\#5](https://github.com/gvelasq/mutagen/issues/5)).

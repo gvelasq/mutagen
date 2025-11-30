@@ -43,7 +43,7 @@ mutagen, first **muta**te then **gen**erate.
 | mutagen function                                                                               | R idiom[¹](#fn1)                                             | Stata function                         |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------|----------------------------------------|
 | [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)            | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()`                            |
-| [`gen_na_listcol()`](https://gvelasq.github.io/mutagen/reference/gen_na_listcol.md)[²](#fn2)   | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))`        | `N/A`                                  |
+| [`gen_listcol_na()`](https://gvelasq.github.io/mutagen/reference/gen_listcol_na.md)[²](#fn2)   | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))`        | `N/A`                                  |
 | [`gen_rowall()`](https://gvelasq.github.io/mutagen/reference/gen_rowall.md)[³](#fn3)           | `pmap_int(data, \(cols) all(list(cols) %in% values))`        | `egenmore rall()`                      |
 | [`gen_rowany()`](https://gvelasq.github.io/mutagen/reference/gen_rowany.md)[⁴](#fn4)           | `pmap_int(data, \(cols) any(list(cols) %in% values))`        | `egen anymatch()`, `egenmore rany()`   |
 | [`gen_rowcount()`](https://gvelasq.github.io/mutagen/reference/gen_rowcount.md)[⁵](#fn5)       | `pmap_int(data, \(cols) sum(list(cols) %in% values))`        | `egen anycount()`, `egenmore rcount()` |
