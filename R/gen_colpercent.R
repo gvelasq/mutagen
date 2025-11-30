@@ -12,20 +12,20 @@
 #' @examples
 #' library(dplyr, warn.conflicts = FALSE)
 #' a <- as_tibble(mtcars)
-#' gen_percent(a, gear)
+#' gen_colpercent(a, gear)
 #' b <-
 #'   a %>%
 #'   select(gear, cyl, carb) %>%
 #'   arrange(gear, cyl, carb) %>%
 #'   mutate(
-#'     pct1 = gen_percent(., gear),
-#'     pct2 = gen_percent(., gear, by = "cyl"),
-#'     pct3 = gen_percent(., gear, by = c("cyl", "carb")),
-#'     prop1 = gen_percent(., gear, prop = TRUE)
+#'     pct1 = gen_colpercent(., gear),
+#'     pct2 = gen_colpercent(., gear, by = "cyl"),
+#'     pct3 = gen_colpercent(., gear, by = c("cyl", "carb")),
+#'     prop1 = gen_colpercent(., gear, prop = TRUE)
 #'   )
 #' b
 #' @export
-gen_percent <- function(data, col, by, prop = FALSE) {
+gen_colpercent <- function(data, col, by, prop = FALSE) {
   stopifnot("`data` argument must be a data frame" = is.data.frame(data))
   if (!missing(col)) {
     check <- dplyr::select(data, {{ col }})
