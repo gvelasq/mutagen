@@ -58,7 +58,7 @@ mutagen, first **muta**te then **gen**erate.
 | mutagen function | R idiom[^1] | Stata function |
 |----|----|----|
 | `gen_colpercent()` | `mutate(data, pct = col / sum(col) * 100, .by = group_cols)` | `egen pc()` |
-| `gen_na_listcol()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
+| `gen_listcol_na()`[^2] | `modify_tree(leaf = \(x) replace(x, is.null(x), NA))` | `N/A` |
 | `gen_rowall()`[^2] | `pmap_int(data, \(cols) all(list(cols) %in% values))` | `egenmore rall()` |
 | `gen_rowany()`[^2] | `pmap_int(data, \(cols) any(list(cols) %in% values))` | `egen anymatch()`, `egenmore rany()` |
 | `gen_rowcount()`[^2] | `pmap_int(data, \(cols) sum(list(cols) %in% values))` | `egen anycount()`, `egenmore rcount()` |

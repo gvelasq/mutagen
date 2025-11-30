@@ -1,6 +1,6 @@
 test_that("non-list objects fail", {
-  expect_error(gen_na_listcol(letters[1:3]))
-  expect_error(gen_na_listcol(1:3))
+  expect_error(gen_listcol_na(letters[1:3]))
+  expect_error(gen_listcol_na(1:3))
 })
 
 test_that("list-column NULLs are converted to NAs", {
@@ -11,7 +11,7 @@ test_that("list-column NULLs are converted to NAs", {
     slice(1:6) %>%
     as_tibble() %>%
     mutate(listcol = list(NULL, "b", "c", "d", "e", "f")) %>%
-    mutate(across(starts_with("listcol"), gen_na_listcol))
+    mutate(across(starts_with("listcol"), gen_listcol_na))
   expect_equal(a[["listcol"]][[1]], NA)
 })
 
@@ -24,6 +24,6 @@ test_that("parallelization works", {
     slice(1:6) %>%
     as_tibble() %>%
     mutate(listcol = list(NULL, "b", "c", "d", "e", "f")) %>%
-    mutate(across(starts_with("listcol"), gen_na_listcol))
+    mutate(across(starts_with("listcol"), gen_listcol_na))
   expect_equal(a[["listcol"]][[1]], NA)
 })

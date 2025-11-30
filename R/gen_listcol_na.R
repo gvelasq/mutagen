@@ -19,10 +19,10 @@
 #' glimpse(a)
 #' b <-
 #'   a %>%
-#'   mutate(across(starts_with("listcol"), gen_na_listcol))
+#'   mutate(across(starts_with("listcol"), gen_listcol_na))
 #' glimpse(b)
 #' @export
-gen_na_listcol <- function(x) {
+gen_listcol_na <- function(x) {
   stopifnot("x must be a list" = is.list(x))
   x <- purrr::modify_tree(
     x,
