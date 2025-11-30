@@ -1,5 +1,7 @@
 # mutagen (development version)
 
+* Renamed `gen_percent()` to `gen_colpercent()` (#30).
+
 # mutagen 0.4.0
 
 * Added `gen_rowsd()` (#29).
@@ -13,7 +15,7 @@
 # mutagen 0.2.0
 
 * Added the R-hub v2 workflow (#25).
-* Added mention of egenmore to README (#24).
+* Added egenmore to README (#24).
 * Renamed `gen_rowmatch()` to `gen_rowany()` (#23).
 * Added `gen_percent()` (#22).
 * Added `gen_rowmiss()` (#21).
