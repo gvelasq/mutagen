@@ -4,7 +4,7 @@
 
 - Renamed `gen_na_listcol()` to
   [`gen_listcol_na()`](https://gvelasq.github.io/mutagen/reference/gen_listcol_na.md)
-  ([\#31](https://github.com/gvelasq/mutagen/issues/31)).
+  ([\#32](https://github.com/gvelasq/mutagen/issues/32)).
 - Renamed `gen_percent()` to
   [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)
   ([\#30](https://github.com/gvelasq/mutagen/issues/30)).
