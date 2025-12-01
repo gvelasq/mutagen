@@ -2,6 +2,8 @@
 
 ## All functions
 
+- [`gen_coldiff()`](https://gvelasq.github.io/mutagen/reference/gen_coldiff.md)
+  : Generate column difference indicator
 - [`gen_colpercent()`](https://gvelasq.github.io/mutagen/reference/gen_colpercent.md)
   : Generate column percent
 - [`gen_listcol_na()`](https://gvelasq.github.io/mutagen/reference/gen_listcol_na.md)

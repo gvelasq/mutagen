@@ -2,6 +2,9 @@
 
 ## mutagen (development version)
 
+- Added
+  [`gen_coldiff()`](https://gvelasq.github.io/mutagen/reference/gen_coldiff.md)
+  ([\#33](https://github.com/gvelasq/mutagen/issues/33)).
 - Renamed `gen_na_listcol()` to
   [`gen_listcol_na()`](https://gvelasq.github.io/mutagen/reference/gen_listcol_na.md)
   ([\#32](https://github.com/gvelasq/mutagen/issues/32)).
