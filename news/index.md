@@ -1,6 +1,6 @@
 # Changelog
 
-## mutagen (development version)
+## mutagen 0.5.0
 
 - Added
   [`gen_coldiff()`](https://gvelasq.github.io/mutagen/reference/gen_coldiff.md)
