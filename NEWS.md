@@ -1,5 +1,6 @@
 # mutagen (development version)
 
+* Added `gen_coldiff()` (#33).
 * Renamed `gen_na_listcol()` to `gen_listcol_na()` (#32).
 * Renamed `gen_percent()` to `gen_colpercent()` (#30).
 
