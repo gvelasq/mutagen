@@ -1,4 +1,4 @@
-# mutagen (development version)
+# mutagen 0.5.0
 
 * Added `gen_coldiff()` (#33).
 * Renamed `gen_na_listcol()` to `gen_listcol_na()` (#32).
